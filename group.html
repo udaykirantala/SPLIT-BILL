@@ -3,36 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group Details | Bill Splitter</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Manage Group</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
     <div class="container">
         <h1 id="groupTitle"></h1>
+        <button onclick="goBack()">⬅ Back to Groups</button>
 
-        <!-- Manage & Delete Group -->
-        <button onclick="deleteGroup()">Delete Group</button>
-        <button onclick="manageGroup()">Manage Group</button>
-
-        <!-- Add Members -->
-        <div>
+        <div class="member-form">
             <input type="text" id="memberName" placeholder="Enter Member Name">
             <button onclick="addMember()">Add Member</button>
         </div>
-        <ul id="memberList"></ul>
 
-        <!-- Add Expense -->
-        <div>
-            <input type="number" id="expenseAmount" placeholder="Enter Expense Amount">
-            <select id="payerSelect"></select>
+        <div id="memberList" class="member-list">
+            <!-- Members will be dynamically added here -->
+        </div>
+
+        <div class="expense-section">
+            <h2>Add Expense</h2>
+            <input type="number" id="expenseAmount" placeholder="Enter Amount">
+            <select id="payerSelect">
+                <!-- Members will be listed here dynamically -->
+            </select>
             <button onclick="addExpense()">Add Expense</button>
         </div>
 
-        <!-- Balance Sheet -->
-        <h2>Final Balances</h2>
-        <ul id="balanceSheet"></ul>
+        <div id="balanceSheet">
+            <h2>Final Balances</h2>
+            <ul id="balanceList"></ul>
+        </div>
     </div>
 
-    <script src="app2.js"></script>
+    <script src="./group.js"></script>
 </body>
 </html>

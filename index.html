@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Group List | Bill Splitter</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Expense Tracker - Groups</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+
     <div class="container">
-        <h1>Bill Splitter</h1>
-
-        <!-- Create Group -->
-        <div>
+        <h1>Expense Tracker</h1>
+        <div class="group-form">
             <input type="text" id="groupName" placeholder="Enter Group Name">
-            <button onclick="createGroup()">Create Group</button>
+            <button onclick="addGroup()">Create Group</button>
         </div>
-
-        <!-- Group List -->
-        <h2>Groups</h2>
-        <ul id="groupList"></ul>
+        
+        <div id="groupList" class="group-list">
+            <!-- Groups will be dynamically added here -->
+        </div>
     </div>
 
-    <script src="app.js"></script>
+    <script src="./main.js"></script>
 </body>
 </html>
